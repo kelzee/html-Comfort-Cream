@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comfort Cream - Order Now</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: red;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  text-align: center;
+  font-size: 24px;
+  color: green;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background: green;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+.testimonial {
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-left: 3px solid green;
+  padding-left: 10px;
+}
+
+.badge {
+  background: #e6ffe6;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- PRODUCT SECTION -->
+  <div class="card">
+    <h1>The Long awaited Natural, Safest, and Fastest Permanent Solution to Heal Pile (Hemorrhoids)is now here</h1>
+    <h1>COMFORT CREAM</h1>
+    <hr/>
+    
+    <img src="./O1CN01e6zLWb2H0MF7OYeCt_!!2214980819088-0-cib.jpg" class="product-img">
+    <img src="./O1CN01GoPrDX2H0MFB6dVUI_!!2214980819088-0-cib.jpg" class="product-img">
+    <img src="./O1CN01KhAHTp2H0MF7OXRL2_!!2214980819088-0-cib.jpg" class="product-img">
+    <img src="./O1CN01Vj1VLx2H0MF3rEttl_!!2214980819088-0-cib.jpg" class="product-img">
+
+    <p class="price">₦19,999.99</p>
+
+    <p style="text-align:center;">
+      Gentle support for your daily comfort. Simple, discreet, and easy to use.
+    </p>
+
+    <ul>
+      <li>✔ Helps soothe discomfort</li>
+      <li>✔ Easy home use</li>
+      <li>✔ Discreet and convenient</li>
+    </ul>
+
+    <div class="badge">
+      🚚 Pay on Delivery Available + Free Delivery
+    </div>
+    <span id="countdown">10:00</span>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="card">
+    <h2>What People Are Saying</h2>
+
+    <div class="testimonial">
+      “I feel more comfortable every day. Glad I tried it.” — Chinedu
+    </div>
+
+    <div class="testimonial">
+      “Simple and easy to use. Fits into my routine.” — Amina
+    </div>
+
+    <div class="testimonial">
+      “I can sit and work without stress now.” — Tunde
+    </div>
+
+  </div>
+
+  <!-- ORDER FORM -->
+  <div class="card">
+    <h2>Place Your Order</h2>
+    <p class="price">₦19,999.99 per cream</p>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <textarea id="address" placeholder="Delivery Address"></textarea>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <button onclick="orderNow()">Order Now on WhatsApp</button>
+  </div>
+
+</div>
+
+<script>
+function orderNow() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var address = document.getElementById("address").value;
+  var quantity = document.getElementById("quantity").value;
+
+  var yourNumber = "2347045240596"; // CHANGE TO YOUR NUMBER
+
+  var message = "Hello, I want to order Comfort Cream:%0A%0A" +
+                "Name: " + name + "%0A" +
+                "Phone: " + phone + "%0A" +
+                "Address: " + address + "%0A" +
+                "Quantity: " + quantity;
+
+  var url = "https://wa.link/9zbnyd" + yourNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+
+// COUNTDOWN
+var time = 600;
+setInterval(function() {
+  var minutes = Math.floor(time / 60);
+  var seconds = time % 60;
+  document.getElementById("countdown").innerText =
+    minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+  if (time > 0) time--;
+}, 1000);
+
+</script>
+
+</body>
+<footer style="background:#111; color:#fff; padding:20px 15px; text-align:center; margin-top:30px;">
+
+  <h3 style="margin-bottom:10px;">Comfort Cream</h3>
+
+  <p style="font-size:14px; line-height:1.5;">
+    Your trusted solution for everyday comfort. Discreet delivery available nationwide.
+  </p>
+
+  <p style="margin-top:15px;">
+    📞 WhatsApp: <a href="https://wa.link/9zbnyd" style="color:#25D366;">Chat with us</a>
+  </p>
+
+  <p style="margin-top:10px; font-size:13px;">
+    🚚 Delivery: 24–72 hours nationwide  
+  </p>
+
+  <p style="margin-top:10px; font-size:13px;">
+    💳 Payment: Pay on Delivery Available
+  </p>
+
+  <hr style="margin:15px 0; border:0.5px solid #444;">
+
+  <p style="font-size:12px; color:#aaa;">
+    © 2026 Comfort Cream. All rights reserved.
+  </p>
+  <p>
+    This site is not a part of the Facebook website, Facebook Inc. It is also not part of the Google Website or Alphabet Inc. Additionally, this site is not endorsed by Facebook or Google in any way. FACEBOOK and GOOGLE is a trademark of FACEBOOK Inc and ALPHABET INC respectively.
+  </p>
+
+</footer>
+</html>
